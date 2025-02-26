@@ -50,7 +50,7 @@ app.get("/leaderboard", async (req, res) => {
     ])
     const leaderboard = results.map((entry, index) => ({
         rank: index + 1,
-        participant: entry._id,  // <--- This is line 51 in your error
+        participant: entry._id, 
         score: entry.totalScore
     }));
     res.json(leaderboard)
