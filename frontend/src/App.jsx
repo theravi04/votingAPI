@@ -19,6 +19,8 @@ function App() {
     try {
       const response = await axios.get(`${API_URL}/leaderboard`);
       setLeaderboard(response.data);
+      console.log(response.data);
+      
     } catch (error) {
       setMessage({ text: "Failed to fetch leaderboard", type: "error" });
     }
